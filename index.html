@@ -18,19 +18,36 @@
       name="keywords"
       content="Ahmed, Portfolio, Software Engineering, Developer"
     />
-
-    <title>Ahmed's Portfolio</title>
+    <script
+      src="https://kit.fontawesome.com/2b260a5b5a.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>zafrans</title>
 
     <link rel="icon" href="/favicon.png" />
-
     <link rel="stylesheet" href="../css/style.css" />
   </head>
 
   <body>
+    <script>
+      // this function is used to check current theme before page loaded.
+      (() => {
+        const currentTheme =
+          (window.localStorage && window.localStorage.getItem("theme")) || "";
+        const isDark = currentTheme === "dark";
+        const pagebody = document.getElementsByTagName("body")[0];
+        if (isDark) {
+          pagebody.classList.add("dark-theme");
+        } else {
+          pagebody.classList.remove("dark-theme");
+        }
+      })();
+    </script>
+
     <div class="wrapper">
       <header>
         <nav class="navbar">
-          <div class="navbar-header">Ahmed's Stash</div>
+          <div class="navbar-header">zafran's</div>
           <div>
             <a href="#">Posts</a>
             <a href="#">Categories</a>
@@ -39,29 +56,27 @@
       </header>
 
       <main class="main">
-        <img src="../image/zafran pic.jpg" alt="Ahmed's Picture" />
+        <img src="/image/zafran2.jpg" alt="Ahmed's Picture" />
         <h1>Software Engineer</h1>
-        <p>
-          Passionate about creating intuitive and engaging user experiences.
-          Specialize in transforming ideas into beautifully crafted products.
-        </p>
+        <p>A canvas of code, a world to build.</p>
 
-        <div class="stats">
-          <div>+3<br />Years of Experience</div>
-          <div>+46<br />Projects Completed</div>
-          <div>+<br />Worldwide Clients</div>
+        <div class="social-icons">
+          <a href="https://twitter.com" target="_blank"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/zafran-sakowi-065b34215/"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/ZafranSY" target="_blank"
+            ><i class="fa-brands fa-square-github"></i
+          ></a>
         </div>
-
-        <div class="skills">Framer, Figma, Wordpress, ReactJS</div>
       </main>
 
       <footer class="footer">
-        <div>
-          <a href="https://instagram.com" target="_blank">Instagram</a>
-          <a href="https://twitter.com" target="_blank">Twitter</a>
-          <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-        </div>
-        <div>© Ahmed</div>
+        <div>© zafran</div>
       </footer>
     </div>
   </body>
