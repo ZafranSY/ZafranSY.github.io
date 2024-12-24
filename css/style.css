@@ -113,3 +113,25 @@ body {
 .footer a:hover {
   color: #c9d1d9;
 }
+@media screen and (max-width: 768px) {
+  .main img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .main h1 {
+    font-size: 1.3em;
+  }
+
+  .main p {
+    font-size: 0.7em;
+  }
+
+  .navbar a {
+    font-size: 1em;
+  }
+
+  .social-icons a {
+    font-size: 1.2em;
+  }
+}
