@@ -114,6 +114,12 @@ body {
   color: #c9d1d9;
 }
 @media screen and (max-width: 768px) {
+  .navbar .navbar-header {
+    font-size: 1em;
+  }
+  .navbar a {
+    font-size: 1em;
+  }
   .main img {
     width: 110px;
     height: 110px;
