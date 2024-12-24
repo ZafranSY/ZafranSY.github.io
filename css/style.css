@@ -1,0 +1,101 @@
+body {
+  font-family: "Gotham", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  transition: all 0.3s ease;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  background-color: #161b22;
+  padding: 0.5em 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .navbar-header {
+  font-size: 1.5em;
+  color: #58a6ff;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #c9d1d9;
+  margin: 0 1em;
+  font-size: 1.1em;
+}
+
+.navbar a:hover {
+  color: #58a6ff;
+}
+
+.main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2em;
+}
+
+.main img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 1em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.main h1 {
+  font-size: 2.5em;
+  color: #58a6ff;
+}
+
+.main p {
+  margin: 1em 0;
+  font-size: 1.2em;
+}
+
+.stats {
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
+
+.stats div {
+  font-size: 1.2em;
+}
+
+.skills {
+  margin-top: 2em;
+  font-size: 1.1em;
+  color: #c9d1d9;
+}
+
+.footer {
+  background-color: #161b22;
+  padding: 1em 0;
+  text-align: center;
+  border-top: 1px solid #21262d;
+}
+
+.footer a {
+  margin: 0 1em;
+  text-decoration: none;
+  color: #58a6ff;
+}
+
+.footer a:hover {
+  color: #c9d1d9;
+}
