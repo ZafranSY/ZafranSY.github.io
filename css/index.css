@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Patua+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --primary-color: #000; /* Transparent black */
+  --secondary-color: rgba(28, 26, 25, 1); /* Fully opaque custom color */
+  --tertiary-color: rgb(121, 121, 121);
+  --bs-gradient: linear-gradient(to right, #0d6efd, #b1aaff);
+}
+
+body {
+  background: var(--primary-color); /* Transparent */
+}
+
+.bg-dark {
+  background-color: var(--secondary-color) !important; /* Navbar background */
+}
+
+.nav .nav-link:hover {
+  background-color: var(--primary-color); /* Transparent background on hover */
+}
+.imgs {
+  background: var(--secondary-color);
+  color: #fff;
+  animation: slideIn ease-in 1s forwards; /* Smooth easing, 1s duration, stops at the end */
+}
+.imgs p {
+  font-size: 12px;
+}
+.imgs h3 {
+  font-family: "Patua One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.about {
+  margin-left: 30px;
+  color: var(--tertiary-color);
+  animation: slideIn ease-in 1.1s forwards; /* Smooth easing, 1s duration, stops at the end */
+}
+.about h1 {
+  font-family: "Poppins", serif;
+  font-size: 60px;
+  font-weight: 800;
+}
+.bg-gradient {
+  background: var(--bs-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.container1 {
+  height: 150px;
+}
+.container1 > div:first-of-type {
+  /* Styles for the first div */
+  background-color: #f46d39;
+  margin: 10px;
+  height: 150px;
+}
+
+.container1 > div:nth-of-type(2) {
+  /* Styles for the first div */
+  background-color: #c1fd45;
+  height: 150px;
+  margin: 10px;
+}
+/* Common container styling */
+.container1 {
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+/* Common styles for boxes */
+.project-box {
+  position: relative;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+/* Orange box with a wavy background */
+.orange {
+  background-color: #ff6600;
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.1) 50%
+  );
+  background-size: 40px 40px;
+}
+
+/* Green box with a zigzag pattern */
+.green {
+  background-color: #ccff00;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.1) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}
+
+/* Ensure text and icons are above the pattern */
+.project-box i,
+.project-box h4 {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover effects for interactivity */
+.project-box:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+.stats p {
+  font-size: 13px;
+}
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100px); /* Start above */
+    opacity: 0; /* Invisible */
+  }
+  100% {
+    transform: translateY(0); /* Final position */
+    opacity: 1; /* Fully visible */
+  }
+}
