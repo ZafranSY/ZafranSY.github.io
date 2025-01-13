@@ -12,8 +12,26 @@ body {
 
 .bg-dark {
   background-color: var(--secondary-color) !important; /* Navbar background */
+  position: fixed; /* Fix the navigation bar at the top */
+  top: 20px; /* Align it to the top of the viewport */
+  z-index: 1000; /* Place it above other elements */
 }
 
+.nav {
+  justify-content: center; /* Center-align the navigation links */
+  margin: 0; /* Remove extra margin */
+}
+
+.nav ul {
+  margin: 0; /* Remove extra margin */
+  padding: 0; /* Remove extra padding */
+  list-style: none; /* Remove bullets from the navigation items */
+}
+
+/* Ensure content starts below the fixed navbar */
+.container {
+  margin-top: 70px; /* Adjust margin to match the navbar height */
+}
 .nav .nav-link:hover {
   background-color: var(--primary-color); /* Transparent background on hover */
 }
@@ -85,24 +103,11 @@ body {
   color: transparent;
   -webkit-text-fill-color: transparent;
 }
-.container1 {
-  gap: 2rem; /* Spacing between items */
-  padding: 0; /* Remove unnecessary padding */
-  margin: 0; /* Remove any extra margin */
-  display: flex;
-  justify-content: center; /* Center align the content */
-}
-
-/* Add spacing between multiple rows of container1 */
-.container1 + .container1 {
-  margin-top: 1rem; /* Adjust spacing between rows */
-}
 
 /* Ensure project-box1 elements are square */
 .project-box1 {
   width: 300px; /* Set a fixed width */
   height: 300px; /* Set height equal to width for square shape */
-  padding: 20px; /* Add padding for content inside the box */
   font-size: 1.2rem; /* Adjust font size */
   display: flex;
   flex-direction: column;
@@ -132,7 +137,6 @@ body {
 /* Common styles for boxes */
 .project-box {
   position: relative;
-  padding: 2rem;
   text-align: center;
   border-radius: 12px;
   overflow: hidden;
@@ -190,6 +194,48 @@ body {
   transform: scale(1.05); /* Slightly enlarge on hover */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Add shadow for effect */
+}
+.project {
+  margin-top: 190px; /* Remove additional spacing at the top */
+}
+
+.container1 {
+  gap: 2rem; /* Keep spacing consistent */
+  padding: 0; /* Remove padding that might push content */
+  margin: 0 auto; /* Center content and remove extra margin */
+  display: flex;
+  justify-content: center;
+}
+
+/* Add spacing between multiple rows of container1 */
+.container1 + .container1 {
+  margin-top: 1rem; /* Adjust spacing between rows */
+}
+
+.project-box1 {
+  background: var(--secondary-color);
+
+  width: 270px; /* Set consistent width */
+  height: 270px; /* Set consistent height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to the top */
+  align-items: center;
+  border-radius: 12px; /* Rounded corners for better design */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+}
+
+.project-box1 img {
+  width: 100%; /* Ensure full width */
+  height: 200px; /* Maintain aspect ratio */
+  border-radius: 12px 12px 0 0; /* Optional rounded corners */
+  object-fit: cover; /* Ensure images cover the area */
+}
+
+.project-box1 h4,
+.project-box1 p {
+  margin: 10px 0; /* Add spacing between text elements */
+  text-align: center; /* Center text inside the box */
 }
 
 @keyframes slideIn {
