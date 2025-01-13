@@ -17,11 +17,49 @@ body {
 .nav .nav-link:hover {
   background-color: var(--primary-color); /* Transparent background on hover */
 }
+/* Make the .imgs section fixed */
 .imgs {
+  position: fixed;
+  top: 100px; /* Adjust as needed */
+  left: 100px; /* Adjust as needed */
+  width: 250px; /* Fixed width */
   background: var(--secondary-color);
   color: #fff;
-  animation: slideIn ease-in 1s forwards; /* Smooth easing, 1s duration, stops at the end */
+  z-index: 10; /* Ensure it stays on top */
+  padding: 20px; /* Add padding for better spacing */
+  border-radius: 8px; /* Optional for better design */
 }
+
+/* Adjust the main content */
+.about,
+.project {
+  margin-left: 300px; /* Add enough margin to avoid overlapping with .imgs */
+}
+
+/* Ensure proper spacing between rows */
+.row {
+  margin-bottom: 2rem;
+}
+
+/* Add specific styling for the project section */
+.project {
+  margin-top: 150px; /* Additional spacing from the section above */
+}
+
+/* Ensure responsive design for smaller screens */
+@media (max-width: 768px) {
+  .imgs {
+    position: static; /* Allow stacking on smaller screens */
+    width: 100%; /* Full width on small screens */
+    margin-bottom: 20px; /* Add spacing */
+  }
+
+  .about,
+  .project {
+    margin-left: 0; /* Remove margin on smaller screens */
+  }
+}
+
 .imgs p {
   font-size: 12px;
 }
@@ -48,25 +86,47 @@ body {
   -webkit-text-fill-color: transparent;
 }
 .container1 {
-  height: 150px;
-}
-.container1 > div:first-of-type {
-  /* Styles for the first div */
-  background-color: #f46d39;
-  margin: 10px;
-  height: 150px;
+  gap: 2rem; /* Spacing between items */
+  padding: 0; /* Remove unnecessary padding */
+  margin: 0; /* Remove any extra margin */
+  display: flex;
+  justify-content: center; /* Center align the content */
 }
 
-.container1 > div:nth-of-type(2) {
-  /* Styles for the first div */
-  background-color: #c1fd45;
-  height: 150px;
-  margin: 10px;
+/* Add spacing between multiple rows of container1 */
+.container1 + .container1 {
+  margin-top: 1rem; /* Adjust spacing between rows */
 }
-/* Common container styling */
-.container1 {
-  gap: 2rem;
-  padding: 2rem 0;
+
+/* Ensure project-box1 elements are square */
+.project-box1 {
+  width: 300px; /* Set a fixed width */
+  height: 300px; /* Set height equal to width for square shape */
+  padding: 20px; /* Add padding for content inside the box */
+  font-size: 1.2rem; /* Adjust font size */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px; /* Rounded corners for better design */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for better design */
+}
+
+/* Orange project box styling */
+.project-box1.orange {
+  background-color: #ff6600; /* Orange background */
+}
+
+/* Green project box styling */
+.project-box1.green {
+  background-color: #ccff00; /* Green background */
+}
+
+/* Optional: Hover effect for project-box1 */
+.project-box1:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
 }
 
 /* Common styles for boxes */
@@ -121,6 +181,17 @@ body {
 .stats p {
   font-size: 13px;
 }
+.container {
+  gap: 10px;
+}
+
+/* Optional: Add a hover effect */
+.project-box1:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Add shadow for effect */
+}
+
 @keyframes slideIn {
   0% {
     transform: translateY(-100px); /* Start above */

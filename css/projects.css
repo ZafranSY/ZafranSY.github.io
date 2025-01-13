@@ -20,7 +20,6 @@ body {
 .imgs {
   background: var(--secondary-color);
   color: #fff;
-  animation: slideIn ease-in 1s forwards; /* Smooth easing, 1s duration, stops at the end */
 }
 .imgs p {
   font-size: 12px;
@@ -47,6 +46,25 @@ body {
   color: transparent;
   -webkit-text-fill-color: transparent;
 }
+.project-box1 {
+  width: auto; /* Ensure width remains responsive */
+  height: 400px; /* Increase height as desired */
+  padding: 20px; /* Maintain padding for spacing inside */
+  font-size: 1.2rem; /* Adjust font size if necessary */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-box1.orange {
+  background-color: #ff6600;
+}
+
+.project-box1.green {
+  background-color: #ccff00;
+}
+
 @keyframes slideIn {
   0% {
     transform: translateY(-100px); /* Start above */
