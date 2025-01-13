@@ -18,8 +18,15 @@ body {
   background-color: var(--primary-color); /* Transparent background on hover */
 }
 .imgs {
+  position: fixed;
+  top: 100px; /* Adjust as needed */
+  left: 100px; /* Adjust as needed */
+  width: 250px; /* Fixed width */
   background: var(--secondary-color);
   color: #fff;
+  z-index: 10; /* Ensure it stays on top */
+  padding: 20px; /* Add padding for better spacing */
+  border-radius: 8px; /* Optional for better design */
 }
 .imgs p {
   font-size: 12px;
@@ -45,24 +52,6 @@ body {
   background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-}
-.project-box1 {
-  width: auto; /* Ensure width remains responsive */
-  height: 400px; /* Increase height as desired */
-  padding: 20px; /* Maintain padding for spacing inside */
-  font-size: 1.2rem; /* Adjust font size if necessary */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.project-box1.orange {
-  background-color: #ff6600;
-}
-
-.project-box1.green {
-  background-color: #ccff00;
 }
 
 @keyframes slideIn {
